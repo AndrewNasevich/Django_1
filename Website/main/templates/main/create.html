@@ -1,0 +1,20 @@
+{% extends 'main/base.html'%}
+{% block title %}
+Создать новую задачу
+{% endblock%}
+
+{% block content %}
+<h1>Создать новую задачу</h1>
+    <form method="post">
+        {% csrf_token   %}
+        {{ form.title }}<br>
+        {{ form.nomer }}<br>
+        {{ form.task }}<br>
+        <!--<input type="text" placeholder="Введите название" class="form-control">
+        <input type="text" placeholder="Введите номер телефона" class="form-control"><br>
+        <textarea type="text" placeholder="Введите описание" class="dorm-control"></textarea><br>"
+        --><button type="submit" class="btn btn-success">Добавить</button>
+        <span>{{ error }}</span>
+    </form>
+{% endblock%}
+
